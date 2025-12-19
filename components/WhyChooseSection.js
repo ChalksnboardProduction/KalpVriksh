@@ -41,7 +41,15 @@ const cards = [
 
 export default function WhyChooseSection() {
   return (
-    <section className="relative overflow-hidden bg-[#2B5271] text-white px-4 md:px-8 lg:px-16 py-16">
+    <section
+      className="relative overflow-hidden bg-[#2B5271] text-white px-4 md:px-8 lg:px-16 pt-16 pb-0"
+      style={{
+        backgroundImage: `url("/image 11.png")`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="relative max-w-6xl lg:max-w-7xl mx-auto flex flex-col items-center text-center gap-8">
         <div className="space-y-3 max-w-4xl">
           <h2 className="text-3xl md:text-4xl font-bold">Why Choose Kalp Vriksh?</h2>
@@ -54,30 +62,30 @@ export default function WhyChooseSection() {
 
         <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-center w-full">
           <div className="grid gap-6 lg:gap-8">
-            {cards.slice(0, 2).map((card) => (
-              <Card key={card.title} {...card} />
+            {cards.slice(0, 2).map((card, idx) => (
+              <Card key={card.title} {...card} isFirst={idx === 0} isSecond={idx === 1} />
             ))}
           </div>
 
-          <div className="relative flex justify-center">
+          <div className="relative hidden md:flex justify-center">
             <div
               className="absolute inset-0 pointer-events-none"
               
             />
-            <div className="relative w-[240px] sm:w-[280px] md:w-[320px] lg:w-[340px] aspect-[3/5] flex items-end">
+              <div className="relative w-[240px] sm:w-[280px] md:w-[320px] lg:w-[340px] aspect-[3/5] flex items-end md:transform-gpu md:origin-bottom md:scale-y-[1.24] md:translate-y-12 md:z-10">
               <Image
                 src="/NO BG 1.png"
                 alt="Kalp Vriksh student"
                 fill
-                className="object-contain"
+                className="object-contain object-bottom"
                 priority
               />
             </div>
           </div>
 
           <div className="grid gap-6 lg:gap-8">
-            {cards.slice(2).map((card) => (
-              <Card key={card.title} {...card} />
+            {cards.slice(2).map((card, idx) => (
+              <Card key={card.title} {...card} isThird={idx === 0} isFourth={idx === 1} />
             ))}
           </div>
         </div>
@@ -86,15 +94,15 @@ export default function WhyChooseSection() {
   )
 }
 
-function Card({ title, body, cta, accent, bg, align = 'left' }) {
+function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, isSecond = false, isThird = false, isFourth = false }) {
   return (
     <div
       className={`relative w-full text-gray-800 px-8 py-8 flex flex-col justify-center lg:gap-6 h-[280px] md:h-[300px] lg:h-[320px] ${
         align === 'right' ? 'text-right items-end' : 'text-left items-start'
-      }`}
+      }  overflow-hidden ${isFirst ? 'md:rounded-br-[90px]' : ''} ${isSecond ? 'md:rounded-tr-[90px]' : ''} ${isThird ? 'md:rounded-bl-[90px]' : ''} ${isFourth ? 'md:rounded-tl-[90px]' : ''}`}
     >
-      <div
-        className="absolute inset-0 pointer-events-none"
+        <div
+          className={`absolute inset-0 pointer-events-none ${isFirst ? 'md:rounded-br-[90px]' : ''} ${isSecond ? 'md:rounded-tr-[90px]' : ''} ${isThird ? 'md:rounded-bl-[90px]' : ''} ${isFourth ? 'md:rounded-tl-[90px]' : ''}`}
         style={{
           backgroundImage: `url("${bg}")`,
           backgroundSize: '120% auto',
