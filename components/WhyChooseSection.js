@@ -18,7 +18,7 @@ const cards = [
     cta: 'Campus Tour',
     accent: '#FFB606',
     bg: '/Rectangle 1016 (2).png',
-    align: 'left',
+    align: 'right',
   },
   {
     title: 'Vibrant Community Life',
@@ -27,7 +27,7 @@ const cards = [
     cta: 'See Events',
     accent: '#FFB606',
     bg: '/Rectangle 1016.png',
-    align: 'right',
+    align: 'left',
   },
   {
     title: 'Holistic Development',
@@ -44,7 +44,7 @@ export default function WhyChooseSection() {
   return (
     <>
       <section
-        className="relative overflow-hidden bg-[#2B5271] text-white px-4 md:px-8 lg:px-16 pt-16 pb-0"
+        className="relative overflow-hidden bg-[#2B5271] text-white px-4 sm:px-6 md:px-8 lg:px-16 pt-12 sm:pt-16 pb-0"
         style={{
           backgroundImage: `url("/image 11.png")`,
           backgroundSize: 'cover',
@@ -52,29 +52,24 @@ export default function WhyChooseSection() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-      <div className="relative max-w-6xl lg:max-w-7xl mx-auto flex flex-col items-center text-center gap-8">
-        <div className="space-y-3 max-w-4xl">
-          <h2 className="text-3xl md:text-4xl font-bold">Why Choose Kalp Vriksh?</h2>
-          <p className="text-sm md:text-base text-white/90">
+      <div className="relative max-w-6xl lg:max-w-7xl mx-auto flex flex-col items-center text-center gap-6 sm:gap-8">
+        <div className="space-y-2 sm:space-y-3 max-w-4xl px-2 sm:px-0">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Why Choose Kalp Vriksh?</h2>
+          <p className="text-xs sm:text-sm md:text-base text-white/90 leading-relaxed">
             Choose Kalpvriksh Public School for its commitment to holistic development, a progressive curriculum,
             dedicated faculty, cutting-edge facilities, and innovative programs, providing students with a well-rounded
             education and preparing them for future success.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr_auto_1fr] gap-8 lg:gap-12 items-center w-full">
-          <div className="grid gap-6 lg:gap-8">
-            {cards.slice(0, 2).map((card, idx) => (
-              <Card key={card.title} {...card} isFirst={idx === 0} isSecond={idx === 1} />
-            ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_auto_1fr] gap-4 sm:gap-6 md:gap-8 lg:gap-0 xl:gap-0 items-end w-full">
+          <div className="grid gap-4 sm:gap-6 lg:gap-6 xl:gap-8 lg:-mr-8 xl:-mr-12">
+            <Card key={cards[0].title} {...cards[0]} isFirst={true} isSecond={false} />
+            <Card key={cards[2].title} {...cards[2]} isFirst={false} isSecond={true} />
           </div>
 
-          <div className="relative hidden md:flex justify-center">
-            <div
-              className="absolute inset-0 pointer-events-none"
-              
-            />
-              <div className="relative w-[240px] sm:w-[280px] md:w-[320px] lg:w-[340px] aspect-[3/5] flex items-end md:transform-gpu md:origin-bottom md:scale-y-[1.24] md:translate-y-12 md:z-10">
+          <div className="relative hidden lg:flex justify-center items-end order-1 lg:order-none lg:-mx-8 xl:-mx-12 z-20 self-end">
+            <div className="relative w-[200px] sm:w-[240px] md:w-[280px] lg:w-[300px] xl:w-[340px] aspect-[3/5] flex items-end transform-gpu origin-bottom scale-y-[1.24]">
               <Image
                 src="/NO BG 1.png"
                 alt="Kalp Vriksh student"
@@ -85,10 +80,9 @@ export default function WhyChooseSection() {
             </div>
           </div>
 
-          <div className="grid gap-6 lg:gap-8">
-            {cards.slice(2).map((card, idx) => (
-              <Card key={card.title} {...card} isThird={idx === 0} isFourth={idx === 1} />
-            ))}
+          <div className="grid gap-4 sm:gap-6 lg:gap-6 xl:gap-8 lg:-ml-8 xl:-ml-12">
+            <Card key={cards[1].title} {...cards[1]} isThird={true} isFourth={false} />
+            <Card key={cards[3].title} {...cards[3]} isThird={false} isFourth={true} />
           </div>
         </div>
       </div>
@@ -102,24 +96,24 @@ export default function WhyChooseSection() {
 function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, isSecond = false, isThird = false, isFourth = false }) {
   return (
     <div
-      className={`relative w-full text-gray-800 px-8 py-8 flex flex-col justify-center lg:gap-6 h-[280px] md:h-[300px] lg:h-[320px] ${
+      className={`relative w-full text-gray-800 px-6 sm:px-7 md:px-8 py-6 sm:py-7 md:py-8 flex flex-col justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] ${
         align === 'right' ? 'text-right items-end' : 'text-left items-start'
-      }  overflow-hidden ${isFirst ? 'md:rounded-br-[90px]' : ''} ${isSecond ? 'md:rounded-tr-[90px]' : ''} ${isThird ? 'md:rounded-bl-[90px]' : ''} ${isFourth ? 'md:rounded-tl-[90px]' : ''}`}
+      } overflow-hidden rounded-lg sm:rounded-xl ${isFirst ? 'md:rounded-tl-[60px] lg:rounded-tl-[90px]' : ''} ${isSecond ? 'md:rounded-bl-[60px] lg:rounded-bl-[90px]' : ''} ${isThird ? 'md:rounded-tr-[60px] lg:rounded-tr-[90px]' : ''} ${isFourth ? 'md:rounded-br-[60px] lg:rounded-br-[90px]' : ''}`}
     >
         <div
-          className={`absolute inset-0 pointer-events-none ${isFirst ? 'md:rounded-br-[90px]' : ''} ${isSecond ? 'md:rounded-tr-[90px]' : ''} ${isThird ? 'md:rounded-bl-[90px]' : ''} ${isFourth ? 'md:rounded-tl-[90px]' : ''}`}
+          className={`absolute inset-0 pointer-events-none rounded-lg sm:rounded-xl ${isFirst ? 'md:rounded-tl-[60px] lg:rounded-tl-[90px]' : ''} ${isSecond ? 'md:rounded-bl-[60px] lg:rounded-bl-[90px]' : ''} ${isThird ? 'md:rounded-tr-[60px] lg:rounded-tr-[90px]' : ''} ${isFourth ? 'md:rounded-br-[60px] lg:rounded-br-[90px]' : ''}`}
         style={{
           backgroundImage: `url("${bg}")`,
-          backgroundSize: '120% auto',
+          backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
         }}
       />
-      <div className="relative space-y-3">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-sm leading-relaxed text-gray-700">{body}</p>
+      <div className="relative space-y-2 sm:space-y-3 z-10">
+        <h3 className="text-base sm:text-lg md:text-xl font-semibold">{title}</h3>
+        <p className="text-xs sm:text-sm leading-relaxed text-gray-700">{body}</p>
         <button
-          className={`text-sm font-semibold px-4 py-2 rounded-full w-fit shadow-sm ${
+          className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
             align === 'right' ? 'ml-auto' : ''
           }`}
           style={{

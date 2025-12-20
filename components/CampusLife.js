@@ -9,8 +9,10 @@ const samplePhotos = [
 ]
 
 const sampleVideos = [
-  { thumb: '/gallery/video1.jpg', id: 'v1' },
-  { thumb: '/gallery/video2.jpg', id: 'v2' },
+  'https://youtu.be/8vi0iHsqcyw?si=tfNI3W53NXZpeK86',
+  'https://youtu.be/b3ibs3Uuag8?si=Hfozxkyh4eegdhgK',
+  'https://youtu.be/A5ZDkbWzPCU?si=_cl4Ovr049eczfcF',
+  'https://youtube.com/shorts/Su0e8aQVDfk?si=2FfBw_9pOusxQdEr',
 ]
 
 export default function CampusLife({ photos = samplePhotos, videos = sampleVideos }) {
@@ -21,7 +23,7 @@ export default function CampusLife({ photos = samplePhotos, videos = sampleVideo
         <p className="text-sm md:text-base text-gray-600 mt-2">Explore the vibrant and enriching environment that our students experience every day</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="flex flex-col gap-8">
         <PhotoGallery images={photos} />
         <VideoGallery videos={videos} />
       </div>
