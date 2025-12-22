@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
+import EnquireButton from './EnquireButton'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -61,23 +62,9 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Enquire Button */}
-        <button 
-          className="hidden lg:block text-white font-semibold flex-shrink-0"
-          style={{
-            backgroundColor: '#FFB606',
-            width: '122px',
-            height: '44px',
-            borderRadius: '29px',
-            paddingTop: '10px',
-            paddingRight: '30px',
-            paddingBottom: '10px',
-            paddingLeft: '30px',
-            gap: '10px',
-            transition: 'all 300ms ease-out',
-          }}
-        >
-          Enquire
-        </button>
+        <div className="hidden lg:block">
+          <EnquireButton />
+        </div>
 
         {/* Mobile Menu Button */}
         <button
@@ -156,23 +143,9 @@ export default function Navbar() {
             >
               Mandatory Disclosure
             </Link>
-            <button 
-              className="text-white font-semibold mt-2"
-              style={{
-                backgroundColor: '#FFB606',
-                width: '122px',
-                height: '44px',
-                borderRadius: '29px',
-                paddingTop: '10px',
-                paddingRight: '30px',
-                paddingBottom: '10px',
-                paddingLeft: '30px',
-                gap: '10px',
-                transition: 'all 300ms ease-out',
-              }}
-            >
-              Enquire
-            </button>
+            <div className="mt-2">
+              <EnquireButton />
+            </div>
           </div>
         </div>
       )}

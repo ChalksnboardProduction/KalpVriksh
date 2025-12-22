@@ -1,10 +1,11 @@
 import Image from 'next/image'
+import EnquireButton from '../../components/EnquireButton'
 
 export default function AboutPage() {
   return (
     <div className="w-full min-h-screen">
       {/* Hero Section with Background Image */}
-      <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+      <section className="relative w-full h-[400px] md:h-[500px] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -25,7 +26,7 @@ export default function AboutPage() {
         />
 
         {/* Content Overlay - positioned in lower portion */}
-        <div className="relative z-10 h-full flex flex-col items-center justify-end pb-16 md:pb-20 px-4 md:px-8 text-center">
+        <div className="relative z-10 h-full flex flex-col items-center justify-end pb-8 md:pb-10 px-4 md:px-8 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6" style={{ fontFamily: 'sans-serif' }}>
             About Kalp Vriksh Public School
           </h1>
@@ -37,17 +38,7 @@ export default function AboutPage() {
           {/* Call-to-Action Buttons */}
           <div className="flex items-center gap-4 sm:gap-6 justify-center">
             {/* Enquire Button */}
-            <button
-              className="text-white font-semibold"
-              style={{
-                backgroundColor: '#FFB606',
-                borderRadius: '999px',
-                padding: '12px 24px',
-                transition: 'all 200ms ease-out',
-              }}
-            >
-              Enquire
-            </button>
+            <EnquireButton />
 
             {/* Campus Tour Button */}
             <button
@@ -161,6 +152,114 @@ export default function AboutPage() {
                   <span className="font-bold">Dear Parents, Guardians, and Students,</span> Every individual is distinctive, and learning to teach is an art in itself. Just as no two fingerprints are alike, we believe that every child is born unique. Each student has their own pace of learning and grasping concepts, and therefore, one way of teaching does not fit all. At Kalpavriksh Public School, we focus on teaching the way children learn, rather than forcing them to learn in a predefined manner. Education should encourage true understanding rather than mere information retention. While the accumulation of knowledge strengthens memory, true comprehension is built on conceptual clarity. Schools are not just assembly lines of syllabus and exams; they should invigorate students' lives and help them develop the resilience and skills to lead a successful future. Our approach goes beyond academics, fostering life skills, values, and habits that prepare students for life's challenges. With this, I extend my heartfelt prayers and best wishes to every student, teacher, and staff member. May our school continue to reach new heights of excellence and be a guiding light in the journey of knowledge and self-discovery. Learn today and lead tomorrow! Chairwoman, Kalpavriksh Public School Learn today, lead tomorrow!
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Core Values Section */}
+      <section className="relative w-full py-8 md:py-12 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/about/bg.png"
+            alt="Background"
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        {/* Dark Blue Overlay */}
+        <div 
+          className="absolute inset-0"
+          
+        />
+
+        {/* Content */}
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center mb-6 md:mb-8" style={{ fontFamily: 'sans-serif' }}>
+            Our Core Values
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4">
+            {/* Integrity */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4">
+                <Image 
+                  src="/about/material-symbols-light_award-star-outline (1).svg" 
+                  alt="Integrity Icon" 
+                  width={40} 
+                  height={40}
+                  className="flex-shrink-0"
+                  style={{ color: '#396D96' }}
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ fontFamily: 'sans-serif' }}>
+                Integrity
+              </h3>
+              <p className="text-white text-sm md:text-base" style={{ fontFamily: 'sans-serif' }}>
+                Happy Parents
+              </p>
+            </div>
+
+            {/* Excellence */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4">
+                <Image 
+                  src="/about/material-symbols_star-outline.svg" 
+                  alt="Excellence Icon" 
+                  width={40} 
+                  height={40}
+                  className="flex-shrink-0"
+                  style={{ color: '#396D96' }}
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ fontFamily: 'sans-serif' }}>
+                Excellence
+              </h3>
+              <p className="text-white text-sm md:text-base" style={{ fontFamily: 'sans-serif' }}>
+                Best Teachers
+              </p>
+            </div>
+
+            {/* Curiosity */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4">
+                <Image 
+                  src="/about/mdi_brain-freeze-outline.svg" 
+                  alt="Curiosity Icon" 
+                  width={40} 
+                  height={40}
+                  className="flex-shrink-0"
+                  style={{ color: '#396D96' }}
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ fontFamily: 'sans-serif' }}>
+                Curiosity
+              </h3>
+              <p className="text-white text-sm md:text-base" style={{ fontFamily: 'sans-serif' }}>
+                Students enrolled
+              </p>
+            </div>
+
+            {/* Respect */}
+            <div className="flex flex-col items-center text-center">
+              <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center mb-4">
+                <Image 
+                  src="/about/material-symbols_handshake-outline.svg" 
+                  alt="Respect Icon" 
+                  width={40} 
+                  height={40}
+                  className="flex-shrink-0"
+                  style={{ color: '#396D96' }}
+                />
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2" style={{ fontFamily: 'sans-serif' }}>
+                Respect
+              </h3>
+              <p className="text-white text-sm md:text-base" style={{ fontFamily: 'sans-serif' }}>
+                Successful Events
+              </p>
             </div>
           </div>
         </div>
