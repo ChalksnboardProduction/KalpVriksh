@@ -126,6 +126,32 @@ function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, i
           >
             {cta}
           </Link>
+        ) : cta === 'See Events' ? (
+          <Link
+            href="/events"
+            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
+              align === 'right' ? 'ml-auto' : ''
+            }`}
+            style={{
+              backgroundColor: accent,
+              color: '#1F2937',
+            }}
+          >
+            {cta}
+          </Link>
+        ) : cta === 'Campus Tour' ? (
+          <Link
+            href="/campus-tour"
+            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
+              align === 'right' ? 'ml-auto' : ''
+            }`}
+            style={{
+              backgroundColor: accent,
+              color: '#1F2937',
+            }}
+          >
+            {cta}
+          </Link>
         ) : (
           <button
             className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
