@@ -1,3 +1,5 @@
+import EnquireButton from './EnquireButton'
+
 export default function HeroSection() {
   return (
     <main className="relative h-screen text-white flex items-center overflow-hidden">
@@ -58,17 +60,7 @@ export default function HeroSection() {
         </p>
 
         <div className="flex items-center gap-4 sm:gap-6">
-          <button
-            className="text-white font-semibold"
-            style={{
-              backgroundColor: '#FFB606',
-              borderRadius: '999px',
-              padding: '12px 24px',
-              transition: 'all 200ms ease-out',
-            }}
-          >
-            Enquire
-          </button>
+          <EnquireButton />
 
           <button
             className="flex items-center gap-3 text-white font-semibold border border-white/60 rounded-full px-4 sm:px-5 h-11 bg-white/10 backdrop-blur hover:bg-white/20 transition-colors"
