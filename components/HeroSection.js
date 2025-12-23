@@ -2,7 +2,7 @@ import EnquireButton from './EnquireButton'
 
 export default function HeroSection() {
   return (
-    <main className="relative h-screen text-white flex items-center overflow-hidden">
+    <main className="relative min-h-screen h-screen text-white flex items-center overflow-hidden">
       {/* Background video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
@@ -22,17 +22,15 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-5xl px-4 md:px-8 lg:px-16 py-16 md:py-24 flex flex-col gap-8">
-        <div className="flex flex-col gap-4">
+      <div className="relative z-10 max-w-5xl px-4 sm:px-6 md:px-8 lg:px-16 py-12 sm:py-16 md:py-24 flex flex-col gap-4 sm:gap-6 md:gap-8">
+        <div className="flex flex-col gap-2 sm:gap-3 md:gap-4">
           <p
             className="text-white/80"
             style={{
-              width: '828px',
-              maxWidth: '100%',
               fontFamily: 'var(--font-poppins), Poppins, sans-serif',
               fontWeight: 700,
-              fontSize: '64px',
-              lineHeight: '100%',
+              fontSize: 'clamp(24px, 5vw, 64px)',
+              lineHeight: '110%',
               letterSpacing: '0%',
             }}
           >
@@ -40,12 +38,10 @@ export default function HeroSection() {
           </p>
           <h1
             style={{
-              width: '828px',
-              maxWidth: '100%',
               fontFamily: 'var(--font-poppins), Poppins, sans-serif',
               fontWeight: 700,
-              fontSize: '64px',
-              lineHeight: '100%',
+              fontSize: 'clamp(28px, 6vw, 64px)',
+              lineHeight: '110%',
               letterSpacing: '0%',
             }}
           >
@@ -53,19 +49,19 @@ export default function HeroSection() {
           </h1>
         </div>
 
-        <p className="text-base sm:text-lg text-white/80 max-w-3xl leading-relaxed">
+        <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-3xl leading-relaxed">
           Growing minds, sparking curiosity, and painting the canvas of knowledge –
           where every question is a brushstroke and every child an artist in the
           masterpiece of learning.
         </p>
 
-        <div className="flex items-center gap-4 sm:gap-6">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 md:gap-6 mt-2 sm:mt-0">
           <EnquireButton />
 
           <button
-            className="flex items-center gap-3 text-white font-semibold border border-white/60 rounded-full px-4 sm:px-5 h-11 bg-white/10 backdrop-blur hover:bg-white/20 transition-colors"
+            className="flex items-center justify-center gap-2 sm:gap-3 text-white font-semibold border border-white/60 rounded-full px-4 sm:px-5 h-11 bg-white/10 backdrop-blur hover:bg-white/20 transition-colors text-sm sm:text-base"
           >
-            <span className="w-8 h-8 flex items-center justify-center rounded-full border border-white/60 bg-white/10">
+            <span className="w-7 h-7 sm:w-8 sm:h-8 flex items-center justify-center rounded-full border border-white/60 bg-white/10 flex-shrink-0">
               <svg
                 width="14"
                 height="16"
