@@ -64,7 +64,7 @@ export default function FacultyPage() {
             A Team That Teaches Together,<br />Grows Together
           </h2>
           <p className="text-white text-base md:text-lg leading-relaxed max-w-4xl" style={{ fontFamily: 'sans-serif' }}>
-            Kalp Vriksh's academic framework brings together grade coordinators, class teachers, and subject specialists in seamless coordination – ensuring every classroom is guided, every lesson well-planned, and every student supported.
+            Kalp Vriksh&apos;s academic framework brings together grade coordinators, class teachers, and subject specialists in seamless coordination – ensuring every classroom is guided, every lesson well-planned, and every student supported.
           </p>
         </div>
         {/* Bottom Border Line */}

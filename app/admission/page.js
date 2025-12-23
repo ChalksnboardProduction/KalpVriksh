@@ -384,7 +384,7 @@ export default function AdmissionPage() {
                   {/* Parent's Name */}
                   <div>
                     <label className="block text-gray-800 font-semibold mb-2" style={{ fontFamily: 'sans-serif' }}>
-                      Parent's Name
+                      Parent&apos;s Name
                     </label>
                     <input
                       type="text"
@@ -536,7 +536,7 @@ export default function AdmissionPage() {
               {openFAQ === 'documents' && (
                 <div className="px-4 md:px-6 pb-4 md:pb-6">
                   <p className="text-gray-700 text-base md:text-lg leading-relaxed" style={{ fontFamily: 'sans-serif' }}>
-                    Required documents include: Birth certificate, Previous school records and transfer certificate, Medical certificate, Passport size photographs, and Aadhaar card (if applicable). Please refer to the "Required Documents" section in Key Information for a complete list.
+                    Required documents include: Birth certificate, Previous school records and transfer certificate, Medical certificate, Passport size photographs, and Aadhaar card (if applicable). Please refer to the &quot;Required Documents&quot; section in Key Information for a complete list.
                   </p>
                 </div>
               )}

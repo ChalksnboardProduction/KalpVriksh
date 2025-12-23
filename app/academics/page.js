@@ -29,10 +29,10 @@ export default function AcademicsPage() {
         <div className="relative z-10 h-full flex flex-col items-start justify-end pb-24 md:pb-32 px-4 md:px-8">
           <div className="max-w-2xl text-left">
             <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-bold mb-4" style={{ fontFamily: 'sans-serif' }}>
-              "At Kalp Vriksh Public School, we believe education goes beyond textbooks.
+              &quot;At Kalp Vriksh Public School, we believe education goes beyond textbooks.
             </p>
             <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed font-bold" style={{ fontFamily: 'sans-serif' }}>
-              Our academic framework nurtures curiosity, creativity, and critical thinking — helping each child grow into a confident learner."
+              Our academic framework nurtures curiosity, creativity, and critical thinking — helping each child grow into a confident learner.&quot;
             </p>
           </div>
         </div>
@@ -59,7 +59,7 @@ export default function AcademicsPage() {
                 Primary
               </h3>
               <p className="text-gray-700 text-base md:text-lg leading-relaxed" style={{ fontFamily: 'sans-serif' }}>
-                These are the formative years of a child's life. We focus on activity-based learning, experience, experimentation, exploration, and educational trips. Our curriculum is designed to foster intellectual, emotional, physical, social, and aesthetic development. We integrate academics with co-curricular activities and sports to instill good values.
+                These are the formative years of a child&apos;s life. We focus on activity-based learning, experience, experimentation, exploration, and educational trips. Our curriculum is designed to foster intellectual, emotional, physical, social, and aesthetic development. We integrate academics with co-curricular activities and sports to instill good values.
               </p>
             </div>
 

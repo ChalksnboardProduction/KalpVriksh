@@ -97,9 +97,9 @@ export default function WhyChooseSection() {
 function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, isSecond = false, isThird = false, isFourth = false }) {
   return (
     <div
-      className={`relative w-full text-gray-800 px-6 sm:px-7 md:px-8 py-6 sm:py-7 md:py-8 flex flex-col justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6 h-[280px] sm:h-[300px] md:h-[320px] lg:h-[340px] ${
+      className={`relative w-full text-gray-800 px-6 sm:px-7 md:px-8 py-6 sm:py-7 md:py-10 flex flex-col justify-start gap-3 sm:gap-4 md:gap-5 lg:gap-6 h-[280px] sm:h-[300px] md:h-[380px] lg:h-[340px] ${
         align === 'right' ? 'text-right items-end' : 'text-left items-start'
-      } overflow-hidden ${isSecond || isThird || isFourth ? 'bg-white' : ''} ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
+      } overflow-hidden ${isFirst ? 'bg-white md:bg-transparent' : ''} ${isSecond || isThird || isFourth ? 'bg-white' : ''} ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
     >
         <div
           className={`absolute inset-0 pointer-events-none ${isFirst ? 'md:rounded-br-[160px]' : ''} ${isSecond ? 'md:rounded-tr-[160px] md:rounded-bl-[0]' : ''} ${isThird ? 'md:rounded-bl-[160px]' : ''} ${isFourth ? 'md:rounded-tl-[160px]' : ''}`}
@@ -110,13 +110,13 @@ function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, i
           backgroundPosition: 'center',
         }}
       />
-      <div className="relative space-y-2 sm:space-y-3 z-10">
+      <div className="relative space-y-2 sm:space-y-3 md:space-y-4 z-10 flex flex-col h-full">
         <h3 className="text-base sm:text-lg md:text-xl font-semibold">{title}</h3>
-        <p className="text-xs sm:text-sm leading-relaxed text-gray-700">{body}</p>
+        <p className="text-xs sm:text-sm leading-relaxed text-gray-700 mb-2 sm:mb-3 md:mb-6 flex-grow">{body}</p>
         {cta === 'Our Faculty' ? (
           <Link
             href="/faculty"
-            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
+            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity mt-auto ${
               align === 'right' ? 'ml-auto' : ''
             }`}
             style={{
@@ -129,7 +129,7 @@ function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, i
         ) : cta === 'See Events' ? (
           <Link
             href="/events"
-            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
+            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity mt-auto ${
               align === 'right' ? 'ml-auto' : ''
             }`}
             style={{
@@ -142,7 +142,7 @@ function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, i
         ) : cta === 'Campus Tour' ? (
           <Link
             href="/campus-tour"
-            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
+            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity mt-auto ${
               align === 'right' ? 'ml-auto' : ''
             }`}
             style={{
@@ -154,7 +154,7 @@ function Card({ title, body, cta, accent, bg, align = 'left', isFirst = false, i
           </Link>
         ) : (
           <button
-            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity ${
+            className={`text-xs sm:text-sm font-semibold px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 rounded-lg w-fit shadow-sm hover:opacity-90 transition-opacity mt-auto ${
               align === 'right' ? 'ml-auto' : ''
             }`}
             style={{

@@ -15,7 +15,7 @@ export default function Navbar() {
     >
       <div className="w-full flex items-center justify-between gap-4">
         {/* Logo and School Name */}
-        <div className="flex items-center gap-3 md:gap-4">
+        <Link href="/" className="flex items-center gap-3 md:gap-4 hover:opacity-80 transition-opacity">
           <div className="w-12 h-12 md:w-16 md:h-16 relative flex-shrink-0">
             <Image
               src="/image 1.png"
@@ -37,7 +37,7 @@ export default function Navbar() {
           >
             Kalp Vriksh Public School
           </h1>
-        </div>
+        </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">

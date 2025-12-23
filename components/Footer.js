@@ -10,17 +10,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Branding Column */}
           <div className="flex items-start gap-4">
-            <div className="flex-shrink-0">
-              <div className="w-16 h-16 rounded-full border-4 relative" style={{ borderColor: '#D4AF37', backgroundColor: '#396D96' }}>
-                <div className="w-full h-full rounded-full flex items-center justify-center" style={{ backgroundColor: '#396D96' }}>
-                  <Image 
-                    src="/KVPS 1.svg" 
-                    alt="Kalp Vriksh Logo" 
-                    width={40}
-                    height={40}
-                    className="object-contain"
-                  />
-                </div>
+            <div className="flex-shrink-0 -mt-4">
+              <div className="w-24 h-24 rounded-full flex items-center justify-center overflow-hidden">
+                <Image 
+                  src="/image 1.png" 
+                  alt="Kalp Vriksh Logo" 
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                />
               </div>
             </div>
             <div className="text-white">
